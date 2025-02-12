@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/360Scene.unity
+    guid: 8c4a1b28c90175c47afe56f6c93e7acf
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d9d9fc6aea7bcd54988d4b6e28035f05, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e26959e94bf41e04b8377265df8b2d53, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cf24d76dedb0b2949a0e0bac80e60bfb, type: 2}
+  m_UseUCBPForAssetBundles: 0

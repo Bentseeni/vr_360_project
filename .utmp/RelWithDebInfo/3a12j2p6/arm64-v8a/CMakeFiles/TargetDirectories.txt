@@ -1,0 +1,5 @@
+C:/Users/MI-214W08/vr_360_project/.utmp/RelWithDebInfo/3a12j2p6/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/MI-214W08/vr_360_project/.utmp/RelWithDebInfo/3a12j2p6/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/MI-214W08/vr_360_project/.utmp/RelWithDebInfo/3a12j2p6/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/MI-214W08/vr_360_project/.utmp/RelWithDebInfo/3a12j2p6/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/MI-214W08/vr_360_project/.utmp/RelWithDebInfo/3a12j2p6/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
