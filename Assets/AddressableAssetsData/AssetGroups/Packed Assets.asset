@@ -15,13 +15,13 @@ MonoBehaviour:
   m_GroupName: Packed Assets
   m_GUID: c996b75a326d54c4e8839d93832dd820
   m_SerializeEntries:
-  - m_GUID: 5525945b897d209458f85cde9b5015c5
-    m_Address: Assets/Videos/07_Puunhalaus.mp4
+  - m_GUID: 12acaaceb549a714bac4076d86caa061
+    m_Address: Assets/Videos/10_Riippumattoon.mp4
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 63ea4a6e13d3cd043b56595822b09c85
-    m_Address: Assets/Videos/11_Riippumatonajattelija.mp4
+  - m_GUID: 5525945b897d209458f85cde9b5015c5
+    m_Address: Assets/Videos/07_Puunhalaus.mp4
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

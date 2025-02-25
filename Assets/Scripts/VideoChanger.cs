@@ -28,21 +28,17 @@ public class VideoChanger : MonoBehaviour
     private AsyncOperationHandle currentVideoOperationHandle;
     [SerializeField] public AssetReference[] assetReferences;
 
-
-
     private Material skyMaterial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         skyMaterial = RenderSettings.skybox;
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.PageUp))
+       /* if (Input.GetKeyDown(KeyCode.PageUp))
         {
             Debug.Log("Start");
             StartVideo(0);
@@ -52,7 +48,7 @@ public class VideoChanger : MonoBehaviour
             Debug.Log("Pause");
 
             PauseVideo();
-        }
+        }*/
     }
 
     public void StartVideo(int i)
@@ -98,8 +94,9 @@ public class VideoChanger : MonoBehaviour
 
             currentVideoOperationHandle = assetReferences[clip].LoadAssetAsync<VideoClip>();
 
-            downloadSlider.gameObject.SetActive(true);
-            downloadText.gameObject.SetActive(true);
+            //downloadSlider.gameObject.SetActive(true);
+            //downloadText.gameObject.SetActive(true);
+            ToggleDownloadInfo();
             Debug.Log("set slider active");
             while (!currentVideoOperationHandle.IsDone)
             {
@@ -124,9 +121,10 @@ public class VideoChanger : MonoBehaviour
 
             Debug.Log("No error");
 
-            
-            downloadSlider.gameObject.SetActive(false);
-            downloadText.gameObject.SetActive(false);
+
+            //downloadSlider.gameObject.SetActive(false);
+            //downloadText.gameObject.SetActive(false);
+            ToggleDownloadInfo();
             Debug.Log("set slider non active");
             if (currentVideoOperationHandle.Status == AsyncOperationStatus.Failed)
             {
@@ -192,6 +190,13 @@ public class VideoChanger : MonoBehaviour
         int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
         double num = Math.Round(bytes / Math.Pow(1024, place), 1);
         return (Math.Sign(byteCount) * num).ToString() + suf[place];
+    }
+
+    public void ToggleDownloadInfo()
+    {
+        downloadSlider.gameObject.SetActive(!downloadSlider.gameObject.activeSelf);
+        downloadText.gameObject.SetActive(! downloadText.gameObject.activeSelf);
+        Debug.Log("Toggled download Slider and Text");
     }
 
 

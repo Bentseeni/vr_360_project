@@ -6,7 +6,7 @@ public class CanvasFade : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     private float alpha = 0.0f;
-    public GameObject UiToHide;
+    public GameObject[] UiToHide;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,13 +48,14 @@ public class CanvasFade : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        UiToHide.SetActive(false);
+        HideUi();
+        
     }
 
     private IEnumerator FadeOut(float fadeDuration)
     {
         float elapsedTime = 0.0f;
-        UiToHide.SetActive(true);
+        ShowUi();
         while (alpha >= 0.0f)
         {
             alpha = (1 - (elapsedTime / fadeDuration));
@@ -63,5 +64,21 @@ public class CanvasFade : MonoBehaviour
             yield return null;
         }
         
+    }
+
+    private void HideUi()
+    {
+        foreach (GameObject ui in UiToHide)
+        {
+            ui.SetActive(false);
+        }
+    }
+
+    private void ShowUi()
+    {
+        foreach (GameObject ui in UiToHide)
+        {
+            ui.SetActive(true);
+        }
     }
 }
